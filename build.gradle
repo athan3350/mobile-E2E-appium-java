@@ -1,14 +1,49 @@
-plugins {
-    id 'java'
-}
-
-group 'org.example'
+group 'moni-FE-E2E-test-sp'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:${project.'serenity-core.version'}")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${project.'sonarqube-gradle-plugin.version'}"
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: "org.sonarqube"
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "net.serenity-bdd:serenity-core:${project.'serenity-core.version'}"
+    implementation "net.serenity-bdd:serenity-junit:${project.'serenity-core.version'}"
+    implementation "net.serenity-bdd:serenity-screenplay:${project.'serenity-screenplay.version'}"
+    implementation "net.serenity-bdd:serenity-cucumber6:${project.'serenity-cucumber6.version'}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${project.'serenity-screenplay-webdriver.version'}"
+    implementation "net.serenity-bdd:serenity-ensure:${project.'serenity-ensure.version'}"
+    implementation "io.appium:java-client:${project.'appium.java-client.version'}"
+    testImplementation "junit:junit:${project.'junit.version'}"
+    compileOnly "org.projectlombok:lombok:${project.'projectlombok.version'}"
+    annotationProcessor "org.projectlombok:lombok:${project.'projectlombok.version'}"
+    testCompileOnly "org.projectlombok:lombok:${project.'projectlombok.version'}"
+    testAnnotationProcessor "org.projectlombok:lombok:${project.'projectlombok.version'}"
+}
+
+test {
+
+    testLogging {
+        showStandardStreams = true
+    }
+    testLogging.showStandardStreams = true
+    gradle.startParameter.continueOnFailure = true
+    systemProperties System.getProperties()
+    test.finalizedBy(aggregate)
 }
