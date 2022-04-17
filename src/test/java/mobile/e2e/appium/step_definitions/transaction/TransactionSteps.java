@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import mobile.e2e.appium.questions.MainQuestion;
 import mobile.e2e.appium.tasks.DemoTask;
-import mobile.e2e.appium.tasks.SkipRateTask;
+import mobile.e2e.appium.interactions.SkipRateTask;
 import mobile.e2e.appium.tasks.TransactionTask;
 import net.serenitybdd.screenplay.actors.OnStage;
 
@@ -23,7 +23,7 @@ public class TransactionSteps {
         OnStage.theActorCalled(nameActor).describedAs("Cash stash's actor");
     }
 
-    @When("He wants to add a new expense\\income by value")
+    @When("He wants to add a new expense\\income")
     public void addExpenseIncome(List<Map<String, String>> dataTransaction) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 DemoTask.skip(),

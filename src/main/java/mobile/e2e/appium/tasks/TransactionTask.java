@@ -39,7 +39,7 @@ public class TransactionTask implements Task {
                 Click.on(TransactionPage.CMB_CATEGORY),
                 Click.on(TransactionPage.LBL_TYPE.of(data.get("type_transaction"))),
                 Click.on(TransactionPage.LBL_CATEGORY.of(data.get("category"))),
-                Enter.theValue(data.get("value")).into(TransactionPage.TXT_VALUE_TRANSACTION),
+                EnterValueTask.now(data),
                 Click.on(TransactionPage.BTN_CONFIRM_TRANSACTION)
         );
     }
