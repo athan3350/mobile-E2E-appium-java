@@ -8,7 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin ={"pretty"},
         features = {"classpath:features"},
-        tags = "@LoginFailByEmptyData",
         glue = {"mobile.e2e.appium"}
 )public class CurrentTestRunner {
 }

@@ -1,4 +1,4 @@
-group 'moni-FE-E2E-test-sp'
+group 'mobile-E2E-appium-java'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -17,24 +17,26 @@ buildscript {
     }
 }
 
-
 apply plugin: 'java'
 apply plugin: 'net.serenity-bdd.aggregator'
 apply plugin: "org.sonarqube"
 
+
 dependencies {
-    implementation "net.serenity-bdd:serenity-core:${project.'serenity-core.version'}"
-    implementation "net.serenity-bdd:serenity-junit:${project.'serenity-core.version'}"
+    testImplementation "org.hamcrest:hamcrest:${project.'org.hamcrest.version'}"
+    testImplementation "org.hamcrest:hamcrest-library:${project.'org.hamcrest.version'}"
+    implementation("net.serenity-bdd:serenity-core:${project.'serenity-screenplay.version'}") {
+        exclude group: 'io.cucumber', module: 'cucumber-core'
+    }
+    implementation "net.serenity-bdd:serenity-cucumber4:${project.'serenity-cucumber4.version'}"
+    implementation "io.cucumber:cucumber-java:${'project.io.cucumber.version'}"
+    testImplementation "io.cucumber:cucumber-junit:${'project.io.cucumber.version'}"
     implementation "net.serenity-bdd:serenity-screenplay:${project.'serenity-screenplay.version'}"
-    implementation "net.serenity-bdd:serenity-cucumber6:${project.'serenity-cucumber6.version'}"
-    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${project.'serenity-screenplay-webdriver.version'}"
-    implementation "net.serenity-bdd:serenity-ensure:${project.'serenity-ensure.version'}"
+    implementation ("net.serenity-bdd:serenity-screenplay-webdriver:${project.'serenity-screenplay-webdriver.version'}") {
+        exclude group: 'io.cucumber', module: 'cucumber-core'
+    }
     implementation "io.appium:java-client:${project.'appium.java-client.version'}"
     testImplementation "junit:junit:${project.'junit.version'}"
-    compileOnly "org.projectlombok:lombok:${project.'projectlombok.version'}"
-    annotationProcessor "org.projectlombok:lombok:${project.'projectlombok.version'}"
-    testCompileOnly "org.projectlombok:lombok:${project.'projectlombok.version'}"
-    testAnnotationProcessor "org.projectlombok:lombok:${project.'projectlombok.version'}"
 }
 
 test {
