@@ -1,4 +1,4 @@
-@manageExpenses
+@runAll @manageExpenses
 Feature: Cash stash manage transactions
 
   ** As a ** Cash stash's user
