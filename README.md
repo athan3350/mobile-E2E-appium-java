@@ -1,4 +1,4 @@
-#:tada::tada: mobile-E2E-appium-java :tada::tada:
+#:tada::tada: <font size="6"> mobile-E2E-appium-java</font> :tada::tada:
 
 
 > This project attempts to automate a mobile application using Appium, Gradle and Java.
