@@ -76,7 +76,7 @@ src
 
 > An example of the report bellow:
 
-![](./src/main/resources/img/serenityReport.png)
+![](./src/main/resources/img/serenityReport.PNG)
 
 ## **Installation**
 
