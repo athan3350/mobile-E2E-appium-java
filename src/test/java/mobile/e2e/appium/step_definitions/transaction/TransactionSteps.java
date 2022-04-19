@@ -32,13 +32,21 @@ public class TransactionSteps {
         );
     }
 
-    @Then("He will see that his expense\\income has been added")
-    public void checkExpenseIncome(List<Map<String, String>> dataBalance) {
-
+    @Then("He will see that his expense has been added")
+    public void checkExpense(List<Map<String, String>> dataBalance) {
         OnStage.theActorInTheSpotlight().should(
                 seeThat("The total balance is: ", MainQuestion.getInfoBalanceTotal(), is("$ -" + dataBalance.get(0).get("totalBalance"))),
                 seeThat("The daily balance is: ", MainQuestion.getInfoBalanceDaily(), is("Total:$ -" + dataBalance.get(0).get("totalBalance")))
         );
-
     }
+
+    @Then("He will see that his income has been added")
+    public void checkIncome(List<Map<String, String>> dataBalance) {
+        OnStage.theActorInTheSpotlight().should(
+                seeThat("The total balance is: ", MainQuestion.getInfoBalanceTotal(), is("$ " + dataBalance.get(0).get("totalBalance"))),
+                seeThat("The daily balance is: ", MainQuestion.getInfoBalanceDaily(), is("Total:$ " + dataBalance.get(0).get("totalBalance")))
+        );
+    }
+
+
 }

@@ -2,18 +2,21 @@ package mobile.e2e.appium.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
+import mobile.e2e.appium.data.CATEGORIES;
 import mobile.e2e.appium.ui.MainPage;
 import mobile.e2e.appium.ui.TransactionPage;
+import mobile.e2e.appium.utils.CheckEnum;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TransactionTask implements Task {
     private final List<Map<String, String>> dataTransaction;
@@ -31,6 +34,8 @@ public class TransactionTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         dataTransaction.get(0).forEach(data::put);
+
+        new CheckEnum().check(Stream.of(CATEGORIES.values()).collect(Collectors.toMap(CATEGORIES::name,CATEGORIES::getCategory)), data.get("category"));
 
         actor.attemptsTo(
                 WaitUntil.the(MainPage.BTN_ADD_EXPENSE_INCOME, WebElementStateMatchers.isCurrentlyVisible())

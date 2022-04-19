@@ -40,7 +40,7 @@ dependencies {
 }
 
 test {
-
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
     testLogging {
         showStandardStreams = true
     }
