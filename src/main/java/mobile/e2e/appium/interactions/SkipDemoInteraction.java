@@ -1,16 +1,16 @@
-package mobile.e2e.appium.tasks;
+package mobile.e2e.appium.interactions;
 
 import mobile.e2e.appium.ui.DemoPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class DemoTask implements Task {
+public class SkipDemoInteraction implements Interaction {
 
-    public static DemoTask skip() {
-        return instrumented(DemoTask.class);
+    public static Interaction skip() {
+        return instrumented(SkipDemoInteraction.class);
     }
 
     @Override
@@ -21,5 +21,6 @@ public class DemoTask implements Task {
                 Click.on(DemoPage.BTN_NEXT_DEMO),
                 Click.on(DemoPage.BTN_NEXT_DEMO)
         );
+
     }
 }

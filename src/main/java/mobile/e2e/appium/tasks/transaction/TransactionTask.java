@@ -1,4 +1,4 @@
-package mobile.e2e.appium.tasks;
+package mobile.e2e.appium.tasks.transaction;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 

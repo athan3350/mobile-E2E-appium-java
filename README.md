@@ -90,7 +90,7 @@ a [Gradle wrapper](http://www.gradle.org/docs/current/userguide/gradle_wrapper.h
 ## **Example usage**
 
 ```bash  
- gradle clean test aggregate --no-build-cache -Denvironment=android -Dcucumber.filter.tags="@tagName"
+ gradle clean test aggregate --no-build-cache -Denvironment=android -Dcucumber.options="--tags @tag_name"
 ```
 
 ## **Tags**

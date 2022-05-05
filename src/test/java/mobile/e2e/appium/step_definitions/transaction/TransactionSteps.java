@@ -3,10 +3,10 @@ package mobile.e2e.appium.step_definitions.transaction;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import mobile.e2e.appium.interactions.SkipDemoInteraction;
 import mobile.e2e.appium.questions.MainQuestion;
-import mobile.e2e.appium.tasks.DemoTask;
-import mobile.e2e.appium.interactions.SkipRateTask;
-import mobile.e2e.appium.tasks.TransactionTask;
+import mobile.e2e.appium.interactions.SkipRateInteraction;
+import mobile.e2e.appium.tasks.transaction.TransactionTask;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static org.hamcrest.Matchers.is;
@@ -26,9 +26,9 @@ public class TransactionSteps {
     @When("He wants to add a new expense\\income")
     public void addExpenseIncome(List<Map<String, String>> dataTransaction) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                DemoTask.skip(),
+                SkipDemoInteraction.skip(),
                 TransactionTask.withData(dataTransaction),
-                SkipRateTask.skip()
+                SkipRateInteraction.skip()
         );
     }
 
