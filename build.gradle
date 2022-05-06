@@ -47,5 +47,4 @@ test {
     testLogging.showStandardStreams = true
     gradle.startParameter.continueOnFailure = true
     systemProperties System.getProperties()
-    test.finalizedBy(aggregate)
 }
