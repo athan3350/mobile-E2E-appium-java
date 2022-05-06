@@ -90,7 +90,7 @@ a [Gradle wrapper](http://www.gradle.org/docs/current/userguide/gradle_wrapper.h
 ## **Example usage**
 
 ```bash  
- gradle clean test aggregate --no-build-cache -Denvironment=android -Dcucumber.filter.tags="@tagName"
+ gradle clean test aggregate --no-build-cache -Denvironment=android -Dcucumber.options="--tags @tag_name"
 ```
 
 ## **Tags**
@@ -102,6 +102,8 @@ The tags used during automation were the following
 | @runAll   |  Run all scenarios  |
 | @addExpensesByValue   |  Validate that new expenses can be added by value  |
 | @addExpensesByKeyBoard   |  Validate that new expenses can be added by keyBoard  |
+| @addIncomesByValue   |  Validate that new incomes can be added by value  |
+| @addIncomesByKeyBoard   |  Validate that new incomes can be added by keyBoard  |
 
 
 ## **used technology stack**

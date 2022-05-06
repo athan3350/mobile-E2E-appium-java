@@ -1,4 +1,4 @@
-package mobile.e2e.appium.tasks;
+package mobile.e2e.appium.tasks.transaction;
 
 import mobile.e2e.appium.ui.TransactionPage;
 import net.serenitybdd.screenplay.Actor;

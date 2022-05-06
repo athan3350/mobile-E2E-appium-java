@@ -1,13 +1,11 @@
-package mobile.e2e.appium.tasks;
+package mobile.e2e.appium.tasks.configurations;
 
-import static net.serenitybdd.screenplay.Tasks.instrumented;
-
+import mobile.e2e.appium.interactions.SelectItemInteraction;
+import mobile.e2e.appium.ui.ConfigurationPage;
 import mobile.e2e.appium.ui.MainPage;
-import mobile.e2e.appium.ui.TransactionPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
@@ -15,17 +13,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TransactionTask implements Task {
+import static mobile.e2e.appium.ui.ModalPage.BTN_MODAL_CONTINUE;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+public class SelectCurrencyTransactionTask implements Task {
     private final List<Map<String, String>> dataTransaction;
     Map<String, String> data = new HashMap<>();
 
 
-    public TransactionTask(List<Map<String, String>> dataTransaction) {
-        this.dataTransaction = dataTransaction;
+    public SelectCurrencyTransactionTask(List<Map<String, String>> dataConfiguration) {
+        this.dataTransaction = dataConfiguration;
     }
 
-    public static TransactionTask withData(List<Map<String, String>> dataTransaction) {
-        return instrumented(TransactionTask.class, dataTransaction);
+    public static SelectCurrencyTransactionTask now(List<Map<String, String>> dataConfiguration) {
+        return instrumented(SelectCurrencyTransactionTask.class, dataConfiguration);
     }
 
     @Override
@@ -36,11 +37,9 @@ public class TransactionTask implements Task {
                 WaitUntil.the(MainPage.BTN_ADD_EXPENSE_INCOME, WebElementStateMatchers.isCurrentlyVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(MainPage.BTN_ADD_EXPENSE_INCOME),
-                Click.on(TransactionPage.CMB_CATEGORY),
-                Click.on(TransactionPage.LBL_TYPE.of(data.get("type_transaction"))),
-                Click.on(TransactionPage.LBL_CATEGORY.of(data.get("category"))),
-                EnterValueTask.now(data),
-                Click.on(TransactionPage.BTN_CONFIRM_TRANSACTION)
+                Click.on(ConfigurationPage.LBL_ITEM.of("\\$")),
+                SelectItemInteraction.select(data.get("currency")),
+                Click.on(BTN_MODAL_CONTINUE)
         );
     }
 }
