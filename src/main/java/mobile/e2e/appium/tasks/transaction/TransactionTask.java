@@ -27,7 +27,7 @@ public class TransactionTask implements Task {
         this.dataTransaction = dataTransaction;
     }
 
-    public static TransactionTask withData(List<Map<String, String>> dataTransaction) {
+    public static TransactionTask now(List<Map<String, String>> dataTransaction) {
         return instrumented(TransactionTask.class, dataTransaction);
     }
 
