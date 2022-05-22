@@ -11,6 +11,7 @@ You need to have previously installed the following tools
 [![java](https://img.shields.io/badge/java-v1.11.X-yellow.svg)](https://www.java.com/es/)
 [![lombok](https://img.shields.io/badge/appium-v1.X-purple.svg)](https://appium.io/)
 
+Download and install the app to automate :point_right: [Here!](https://apkcombo.com/es/cashstash-expense-manager-budget-tracker/com.slickteck.budget.tracker/) :point_left:
 
 > ## **Table of Contents**
 
@@ -88,6 +89,8 @@ a [Gradle wrapper](http://www.gradle.org/docs/current/userguide/gradle_wrapper.h
 * change into the new directory `cd mobile-E2E-appium-java`.
 
 ## **Example usage**
+
+![](./src/main/resources/img/exampleOfUse.gif)
 
 ```bash  
  gradle clean test aggregate --no-build-cache -Denvironment=android -Dcucumber.options="--tags @tag_name"
