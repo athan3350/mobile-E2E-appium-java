@@ -33,8 +33,6 @@ public class SelectCurrencyMainTask implements Task {
         dataTransaction.get(0).forEach(data::put);
 
         actor.attemptsTo(
-                Click.on(ConfigurationPage.BTN_CONFIGURATION),
-                SelectItemInteraction.select(SELECT_CURRENCY),
                 SelectItemInteraction.select(data.get("currency"))
         );
     }
