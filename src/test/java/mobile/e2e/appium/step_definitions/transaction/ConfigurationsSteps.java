@@ -6,13 +6,11 @@ import mobile.e2e.appium.interactions.SkipDemoInteraction;
 import mobile.e2e.appium.questions.ConfigurationQuestion;
 import mobile.e2e.appium.tasks.configurations.SelectCurrencyMainTask;
 import mobile.e2e.appium.tasks.configurations.SelectCurrencyTransactionTask;
-import mobile.e2e.appium.tasks.configurations.SelectItemToConfigurateTask;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import java.util.List;
 import java.util.Map;
 
-import static mobile.e2e.appium.constants.GeneralConstants.SELECT_CURRENCY;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.is;
 
@@ -22,7 +20,6 @@ public class ConfigurationsSteps {
     public void selectCurrencyMain(List<Map<String, String>> dataConfiguration) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 SkipDemoInteraction.skip(),
-                SelectItemToConfigurateTask.now(SELECT_CURRENCY),
                 SelectCurrencyMainTask.now(dataConfiguration)
         );
     }

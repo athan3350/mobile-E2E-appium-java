@@ -27,7 +27,7 @@ public class TransactionSteps {
     public void addExpenseIncome(List<Map<String, String>> dataTransaction) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 SkipDemoInteraction.skip(),
-                TransactionTask.now(dataTransaction),
+                TransactionTask.withData(dataTransaction),
                 SkipRateInteraction.skip()
         );
     }
