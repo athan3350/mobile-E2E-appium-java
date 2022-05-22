@@ -9,7 +9,6 @@ public class ModalPage {
 
     public static final Target LBL_MODAL_TITLE = Target.the("Label with the modal title").located(By.id("alertTitle"));
     public static final Target BTN_MODAL_NO_THANKS = Target.the("Button to skip rating app").located(By.id("android:id/button2"));
-    public static final Target BTN_MODAL_CUSTOM = Target.the("Button to custom").located(By.id("android:id/button3"));
     public static final Target BTN_MODAL_CONTINUE = Target.the("Button to confirm the modal").located(By.id("android:id/button1"));
 
 }
