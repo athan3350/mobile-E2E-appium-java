@@ -18,7 +18,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class TransactionSteps {
 
-    @Given("{word} is a Cash stash's user")
+    @Given("{word} is an user")
     public void initializeActor(String nameActor) {
         OnStage.theActorCalled(nameActor).describedAs("Cash stash's actor");
     }

@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin ={"pretty"},
         features = {"classpath:features"},
-        glue = {"mobile.e2e.appium"}
+        glue = {"mobile.e2e.appium"},
+        tags = "@chrome"
 )public class CurrentTestRunner {
 }

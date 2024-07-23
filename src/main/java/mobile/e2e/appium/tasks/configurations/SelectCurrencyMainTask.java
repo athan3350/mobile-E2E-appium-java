@@ -1,7 +1,7 @@
 package mobile.e2e.appium.tasks.configurations;
 
 import mobile.e2e.appium.interactions.SelectItemInteraction;
-import mobile.e2e.appium.ui.ConfigurationPage;
+import mobile.e2e.appium.ui.cash_stash.ConfigurationPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

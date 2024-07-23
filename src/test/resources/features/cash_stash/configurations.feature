@@ -9,7 +9,7 @@ Feature: Cash stash manage the configurations
 
   @selectCurrencyMainMenu
   Scenario Outline: Validate that new currency can be selected from the main menu
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to select the currency from the main menu
       | currency   | id_currency   |
       | <currency> | <id_currency> |
@@ -23,7 +23,7 @@ Feature: Cash stash manage the configurations
 
   @selectCurrencyTransaction
   Scenario Outline: Validate that new currency can be selected from the transaction module
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to select the currency from the transaction module
       | currency   | id_currency   |
       | <currency> | <id_currency> |

@@ -1,6 +1,6 @@
 package mobile.e2e.appium.tasks.transaction;
 
-import mobile.e2e.appium.ui.TransactionPage;
+import mobile.e2e.appium.ui.cash_stash.TransactionPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

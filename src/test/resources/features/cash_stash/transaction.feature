@@ -8,7 +8,7 @@ Feature: Cash stash manage transactions
 
   @addExpensesByValue
   Scenario Outline: Validate that new expenses can be added by value
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to add a new expense\income
       | type_transaction | category   | value   |
       | GASTOS           | <category> | <value> |
@@ -25,7 +25,7 @@ Feature: Cash stash manage transactions
 
   @addExpensesByKeyBoard
   Scenario Outline: Validate that new expenses can be added by keyBoard
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to add a new expense\income
       | type_transaction | category   | value   | using_keyboard |
       | GASTOS           | <category> | <value> | true           |
@@ -42,7 +42,7 @@ Feature: Cash stash manage transactions
 
   @addIncomesByValue
   Scenario Outline: Validate that new incomes can be added by value
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to add a new expense\income
       | type_transaction | category   | value   |
       | INGRESO          | <category> | <value> |
@@ -59,7 +59,7 @@ Feature: Cash stash manage transactions
 
   @addIncomesByKeyBoard
   Scenario Outline: Validate that new incomes can be added by keyBoard
-    Given <clientName> is a Cash stash's user
+    Given <clientName> is an user
     When He wants to add a new expense\income
       | type_transaction | category   | value   | using_keyboard |
       | INGRESO          | <category> | <value> | true           |

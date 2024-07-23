@@ -1,6 +1,6 @@
 package mobile.e2e.appium.step_definitions;
 import io.cucumber.java.Before;
-import mobile.e2e.appium.actors.ActorCast;
+import mobile.e2e.appium.actors.SetActor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.util.EnvironmentVariables;
 
@@ -10,6 +10,6 @@ public class Hooks {
 
     @Before
     public void setTheStageMobilePlay() {
-        OnStage.setTheStage(new ActorCast(environmentVariables));
+        OnStage.setTheStage(new SetActor(environmentVariables));
     }
 }

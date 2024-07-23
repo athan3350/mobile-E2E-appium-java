@@ -1,4 +1,4 @@
-package mobile.e2e.appium.ui;
+package mobile.e2e.appium.ui.cash_stash;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;

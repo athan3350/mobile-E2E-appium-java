@@ -3,8 +3,8 @@ package mobile.e2e.appium.tasks.transaction;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import mobile.e2e.appium.data.CATEGORIES;
-import mobile.e2e.appium.ui.MainPage;
-import mobile.e2e.appium.ui.TransactionPage;
+import mobile.e2e.appium.ui.cash_stash.MainPage;
+import mobile.e2e.appium.ui.cash_stash.TransactionPage;
 import mobile.e2e.appium.utils.CheckEnum;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

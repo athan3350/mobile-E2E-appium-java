@@ -8,11 +8,11 @@ import net.thucydides.core.util.EnvironmentVariables;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
 import org.openqa.selenium.WebDriver;
 
-public class ActorCast extends Cast {
+public class SetActor extends Cast {
 
     public final EnvironmentVariables environmentVariables;
 
-    public ActorCast(EnvironmentVariables environmentVariables) {
+    public SetActor(EnvironmentVariables environmentVariables) {
         this.environmentVariables = environmentVariables;
     }
 

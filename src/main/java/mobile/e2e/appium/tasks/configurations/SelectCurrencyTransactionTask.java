@@ -1,8 +1,8 @@
 package mobile.e2e.appium.tasks.configurations;
 
 import mobile.e2e.appium.interactions.SelectItemInteraction;
-import mobile.e2e.appium.ui.ConfigurationPage;
-import mobile.e2e.appium.ui.MainPage;
+import mobile.e2e.appium.ui.cash_stash.ConfigurationPage;
+import mobile.e2e.appium.ui.cash_stash.MainPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static mobile.e2e.appium.ui.ModalPage.BTN_MODAL_CONTINUE;
+import static mobile.e2e.appium.ui.cash_stash.ModalPage.BTN_MODAL_CONTINUE;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectCurrencyTransactionTask implements Task {

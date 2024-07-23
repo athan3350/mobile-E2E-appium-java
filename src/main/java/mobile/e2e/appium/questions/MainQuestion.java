@@ -1,6 +1,6 @@
 package mobile.e2e.appium.questions;
 
-import mobile.e2e.appium.ui.MainPage;
+import mobile.e2e.appium.ui.cash_stash.MainPage;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 

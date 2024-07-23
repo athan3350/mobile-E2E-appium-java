@@ -1,6 +1,6 @@
 package mobile.e2e.appium.interactions;
 
-import mobile.e2e.appium.ui.DemoPage;
+import mobile.e2e.appium.ui.cash_stash.DemoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
