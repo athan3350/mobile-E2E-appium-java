@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
         plugin ={"pretty"},
         features = {"classpath:features"},
         glue = {"mobile.e2e.appium"},
-        tags = "@chrome"
-)public class CurrentTestRunner {
+        tags = "@loginSuccess"
+)public class CurrentRunnerTest {
 }
